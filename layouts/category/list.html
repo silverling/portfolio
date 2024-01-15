@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1>Categories</h1>
+
+<div class="categories">
+  {{ range .Site.Taxonomies.categories }}
+    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+  {{ end }}
+</div>
+
+{{ end }}

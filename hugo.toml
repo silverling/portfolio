@@ -1,0 +1,6 @@
+baseURL = 'http://silverl.me/'
+languageCode = 'zh-cn'
+title = "Silver"
+
+[taxonomies]
+category = 'categories'
