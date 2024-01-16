@@ -8,8 +8,8 @@ I'm Silver Ling, currently researching on deep learning and computer graphics.
 
 ## Academics
 
-* BSc (CS) graduate at Xidian University (2019 - 2023).
-* MSc (CS) student at Xidian University (2023 - present).
+* BE (AI) graduate at Xidian University (2019 - 2023).
+* ME (CS) student at Xidian University (2023 - present).
 
 ## Hobbies
 
