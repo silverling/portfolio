@@ -2,7 +2,7 @@
 title: "强化学习：K-Armed Bandit"
 date: 2023-08-13T20:37:45+08:00
 draft: false
-categories: "机器学习"
+categories: "Machine Learning"
 ---
 
 想象一下，在你面前有一台老虎机（**Bandit**），老虎机上有一个拉杆（ref as **Action**）。每次拉动拉杆，你会得到一个分数（**Reward**），这个分数产生自一个随机分布。在玩了几局之后，你很快就能估计出分数的期望值，并知道了再玩下去是亏是赢。

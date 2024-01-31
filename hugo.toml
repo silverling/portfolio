@@ -4,3 +4,9 @@ title = "Silver"
 
 [taxonomies]
 category = 'categories'
+
+[markup.highlight]
+style = "github"
+tabWidth = 4
+guessSyntax = true
+codeFences = true
