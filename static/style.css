@@ -4,8 +4,8 @@
 
 /* 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸 */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
   background-color: #ffffff00;
 }
 /* 定义滑块内阴影+圆角 */
@@ -19,12 +19,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media only screen and (min-width: 600px) {
-  :root {
-    font-size: 1.125rem;
-  }
 }
 
 body {
@@ -49,8 +43,8 @@ em {
 
 pre {
   overflow-x: auto;
-  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  margin: 2rem;
+  box-shadow: 3px 3px 3px rgba(68, 68, 68, 0.6);
+  margin: 0.5rem 0;
   padding: 1rem 2rem 1rem 1rem;
   border: 2px solid black;
   border-radius: 7px;
@@ -122,4 +116,21 @@ footer > p {
 }
 .post-content .font-halt {
   font-feature-settings: "halt";
+}
+
+@media only screen and (min-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff00;
+  }
+
+  :root {
+    font-size: 1.125rem;
+  }
+
+  pre {
+    margin: 2rem;
+    padding: 1rem 2rem 1rem 1rem;
+  }
 }
