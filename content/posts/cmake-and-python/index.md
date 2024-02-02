@@ -2,7 +2,7 @@
 title: "CMake and Python"
 date: 2024-01-31T13:11:23+08:00
 draft: false
-categories: cmake
+categories: "CMake"
 ---
 
 在 CMake 中指定 Conda 环境或 venv 环境的两种方法。以下方式均可以通过修改 `CMakeLists.txt` 来实现，也可以在命令行执行 `cmake` 时添加 `-D` 参数实现。

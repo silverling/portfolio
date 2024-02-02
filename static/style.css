@@ -38,7 +38,7 @@ a {
 }
 
 em {
-  font-family: "Zilla Slab", "KaiTi", "楷体", serif;
+  font-family: "Zilla Slab", "Book Antiqua", "KaiTi", "楷体", serif;
 }
 
 pre {
@@ -53,6 +53,11 @@ code {
   font-size: 0.9rem;
   font-family: "Cascadia Code", "Fira Code", "Consolas", "Courier New",
     monospace;
+}
+p > code {
+  background-color: #f0f0f0;
+  padding: 0.125rem;
+  border-radius: 3px;
 }
 
 header {
