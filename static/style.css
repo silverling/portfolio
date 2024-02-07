@@ -48,9 +48,9 @@ pre {
   padding: 1rem 2rem 1rem 1rem;
   border: 2px solid black;
   border-radius: 7px;
+  font-size: 0.9rem;
 }
 code {
-  font-size: 0.9rem;
   font-family: "Cascadia Code", "Fira Code", "Consolas", "Courier New",
     monospace;
 }
