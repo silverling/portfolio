@@ -90,11 +90,19 @@ export LD_LIBRARY_PATH="$CUDA_PATH/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
 
 ```bash
 usecuda() {
+	# check whether a command exists
+	check_command() {
+		if ! command -v $1 &> /dev/null; then
+			echo "please install $1 first"
+			return 1
+		fi
+		return 0
+	}
 
-	if [ -z $1 ]; then
-		echo "Usage: usecuda <env>"
-		return
-	fi
+	check_command micromamba || return
+	check_command tr || return
+	check_command sed || return
+	check_command grep || return
 
 	# check whether MAMBA_ROOT_PREFIX is set
 	if [ -z "$MAMBA_ROOT_PREFIX" ]; then
@@ -102,17 +110,22 @@ usecuda() {
 		echo "Please set MAMBA_ROOT_PREFIX to the root of the mamba environment"
 		return
 	fi
-	
+
+	if [ -z $1 ]; then
+		echo "Usage: usecuda <env>"
+		return
+	fi
+
 	# check whether new env exists
 	local env=$1
 	local new_env=$(readlink -f "$MAMBA_ROOT_PREFIX/envs/$env")
-	if [ ! -d $new_env ]; then 
+	if [ ! -d $new_env ]; then
 		echo "Environment $new_env not found"
 		return
 	fi
 
 	# detect and remove old env
-	if [ ';' != "$(which nvcc);" ]; then
+	if command -v nvcc &> /dev/null; then
 		local old_env=$(dirname $(dirname $(which nvcc)))
 		export PATH=$(echo $PATH | tr ':' '\n' | grep -v -E "^$old_env/" | tr '\n' ':' | sed 's;:$;;')
 		export LD_LIBRARY_PATH=$(echo $LD_LIBRARY_PATH | tr ':' '\n' | grep -v -E "^$old_env/" | tr '\n' ':' | sed 's;:$;;')
