@@ -5,15 +5,15 @@ draft: false
 categories: "CMake"
 ---
 
-在 CMake 中 `execute_process` 函数可以执行系统命令。
-
-COMMAND 接受的参数是一个 [list](https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#lists)，所以不要用双引号包裹。例如：
+在 CMake 中 `execute_process` 函数可以执行系统命令。例如：
 
 ```diff
 execute_process(
 	COMMAND echo Hello
 )
 ```
+
+COMMAND 接受的参数是一个 [list](https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#lists)，所以不要用双引号包裹。
 
 `execute_process` 也支持运行多条命令，例如：
 
