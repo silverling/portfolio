@@ -1,5 +1,5 @@
 ---
-title: "Cmake Specify Linker"
+title: "CMake 指定链接器"
 date: 2024-03-15T14:48:29+08:00
 draft: false
 categories: "CMake"
